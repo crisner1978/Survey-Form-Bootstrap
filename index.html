@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container" id="main">
+        <div class="row border border-3 border-dark mx-5">
+            <div class="col-12 text-center bg-info border border-2">
+                <h1 class="text-white pt-2" id="title">Gas or Electric?</h1>
+                <p class="mx-4 text-white" id="description">Complete the survey by indicating your energy
+                    preferences.</p>
+            </div>
+        </div>
+    </div>
+
+    <form class="row px-5 pt-3 mx-5 justify-content-center" action="/Survey/" id="survey-form">
+        <div class="col-md-4 px-4">
+            <label class="form-label" for="name" id="name-label">Name</label>
+            <input type="text" id="name" class="form-control" placeholder="Name" required>
+        </div>
+        <div class="col-md-4 px-4">
+            <label class="form-label" for="email" id="email-label">Email</label>
+            <input type="email" id="email" class="form-control" placeholder="Email" required>
+        </div>
+        <div class="col-md-4 px-4">
+            <label class="form-label" for="number" id="number-label">Phone</label>
+            <input type="number" id="number" class="form-control" placeholder="Phone" min="7" max="10">
+        </div>
+
+        <fieldset class="row mb-3">
+            <div class="col-md-4 pe-4 pt-3">
+                <label class="col-form-label" for="energy-select">Energy Preference:</label>
+                <select name="energy" class="form-control mt-1" id="dropdown">
+                    <option value="">--Select One--</option>
+                    <option value="gasoline">Gasoline</option>
+                    <option value="electric">Electric</option>
+                    <option value="hybrid">Hybrid</option>
+                    <option value="wind">Wind</option>
+                    <option value="solar">solar</option>
+                </select>
+            </div>
+            <div class="col-md-4 px-4 pt-3">
+                <legend class="col-form-label">Your primary sources:</legend>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gasoline" value="gasoline" name="energy">
+                    <label class="form-check-label" for="gasoline">Gasoline</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="electric" value="electric" name="energy">
+                    <label class="form-check-label" for="electric">Electric</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="hybrid" value="hybrid" name="energy">
+                    <label class="form-check-label" for="hybrid">Hybrid</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="wind" value="wind" name="energy">
+                    <label class="form-check-label" for="wind">Wind</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="solar" value="solar" name="energy">
+                    <label class="form-check-label" for="solar">Solar</label>
+                </div>
+            </div>
+            <div class="col-md-4 px-4 pt-3">
+                <legend class=" col-form-label">Is climate change real?</legend>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="absulutely" name="change" value="1">
+                        <label class="form-check-label" for="absolutely">Absolutely</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="very-likely" name="change" value="2">
+                        <label class="form-check-label" for="very-likely">Very Likely</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="maybe" name="change" value="3">
+                        <label class="form-check-label" for="Maybe">Maybe</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="i-don't-know" name="change" value="4">
+                        <label class="form-check-label" for="i-don't-know">I don't know</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="who-cares" name="change" value="5">
+                        <label class="form-check-label" for="who-cares">Who cares</label>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        
+        <div class="row">
+            <div class="">
+                <div class="form-floating row">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"
+                        style="height:100px"></textarea>
+                    <label for="floatingTextarea">Comments</label>
+                </div>
+                <div class="col text-end">
+                    <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
